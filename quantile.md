@@ -1,0 +1,11 @@
+Type | $k$| $p_k$| $Q_p$|Notes
+:-:|:-:|:-:|:-:|:-:
+1|${\displaystyle Np + \frac{1}{2}}$|${\displaystyle \frac{k-1/2}{N}}$|$x_{\lceil {k-1/2 \rceil}}$|Inverse of empirical distribution function.
+2|${\displaystyle Np + \frac{1}{2}}$|${\displaystyle \frac{k-1/2}{N}}$|$(x_{\lceil k-1/2\rceil}+x_{\lceil k +1/2\rceil})/2$|The same as Type-1, but with averaging at discontinuities
+3|$Np$|${\displaystyle \frac{k}{N}}$|$x_{\lfloor k\rceil}$|The observation numbered closest to $Np$. Here, $x_{\lfloor k\rceil}$ indicates rounding to the nearest integer, choosing the even integer in the case of a tie
+4|$Np$|${\displaystyle \frac{k}{N}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|Linear interpolation of the empirical distribution function
+5|${\displaystyle Np + \frac{1}{2}}$|${\displaystyle \frac{k-1/2}{N}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|Piecewise linear function where the knots are the values midway through the steps of the empirical distribution function
+6|$(N+1)p$|${\displaystyle \frac{k}{N+1}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|Linear interpolation of the expectations for the order statistics for the uniform distribution on $[0,1]$. That is, it is the linear interpolation between points $(p_k, x_k)$, where $p_k = k/(N+1)$ is the probability that the last of $(N+1)$ randomly drawn values will not exceed the $k$-th smallest of the first $N$ randomly drawn values.
+7|$(N-1)p+1$|${\displaystyle \frac{k-1}{N-1}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|	Linear interpolation of the modes for the order statistics for the uniform distribution on $[0,1]$
+8|${\displaystyle (N+\frac{1}{3})p+\frac{1}{3}}$|${\displaystyle \frac{k-1/3}{N+1/3}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|Linear interpolation of the approximate medians for order statistics
+9|${\displaystyle (N+\frac{1}{4})p+\frac{3}{8}}$|${\displaystyle \frac{k-3/8}{N+1/4}}$|$x_{\lfloor k\rfloor}+(k-\lfloor k\rfloor)(x_{\lfloor k\rfloor+1}-x_{\lfloor k\rfloor})$|The resulting quantile estimates are approximately unbiased for the expected order statistics if $x$ is normally distributed
